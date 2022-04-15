@@ -3,7 +3,7 @@ console.log("changing discord invite link")
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 
-const discordID = params["utm_campaign"] || params["utm_source"] || params["invite"];
+const discordID = params["invite"] || params["utm_campaign"] ;
 
 if (discordID) {
     const links = document.querySelectorAll('a[href*="https://discord.gg"]');
